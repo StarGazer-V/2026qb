@@ -162,7 +162,7 @@ private fun ScoreProgressChart(scores: List<GtScoreEntity>) {
     Card(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp)) {
             Text("Progress graph", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-            Text("Vico is included for production charts; this Canvas fallback keeps previews fast and offline.")
+.            Text("This chart uses Compose Canvas so the debug APK builds without an extra charting dependency.")
             Canvas(Modifier.fillMaxWidth().height(220.dp).padding(top = 12.dp)) {
                 if (scores.size < 2) return@Canvas
                 val values = scores.map { it.netScore.toFloat() }
